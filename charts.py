@@ -259,7 +259,7 @@ def box_salary_by_age(df: pd.DataFrame) -> plt.Figure:
     groups = [sub[sub["Age"]==a]["ConvertedCompYearly"].values for a in age_order_f]
     fig, ax = _base(10, 5)
     bp = ax.boxplot(
-        groups, labels=labels, patch_artist=True, notch=False,
+        groups, tick_labels=labels, patch_artist=True, notch=False,
         medianprops=dict(color=GOLD, linewidth=2.5),
         flierprops=dict(marker="o", color=FIRE, alpha=0.25, markersize=2.5),
         whiskerprops=dict(color=MUTED, linewidth=1.2),
